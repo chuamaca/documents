@@ -9,8 +9,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.poi.ss.SpreadsheetVersion;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataConsolidateFunction;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.util.AreaReference;
+import org.apache.poi.ss.util.CellReference;
+import org.apache.poi.xssf.usermodel.XSSFPivotTable;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONArray;
@@ -63,6 +68,9 @@ public class InventoryController {
     	System.out.println("Ingresa a Body: " + header);
 		Iterator<JsonNode> it = header.iterator();
 		
+		
+		
+		
 		//Archivo Origen
 		File file = new File("D:\\MaestroDynamica.xlsx");
 	    FileInputStream inputStream = new FileInputStream(file);
@@ -70,9 +78,14 @@ public class InventoryController {
 		
 		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
 		
+		/*
+		 
+	 	XSSFSheet sheet2 = wb.getSheet("Resumen"); 
+		 XSSFSheet sheet = wb.createSheet("Data Reporte");
+		 * */
 		 
 		XSSFSheet sheet = wb.getSheet("Data Reporte");
-	 	XSSFSheet sheet2 = wb.getSheet("Resumen");
+		//XSSFSheet sheet2 = wb.createSheet("Resumen");
 
 		Row row = sheet.createRow(0);
 		int colNum = 0;
@@ -110,7 +123,7 @@ public class InventoryController {
 			articuloCell.setCellValue(rowNode.get("articulo").asText());
 			descripcionCell.setCellValue(rowNode.get("descripcion").asText());
 			estatus_inventarioCell.setCellValue(rowNode.get("estatus_inventario").asText());
-			cantidadCell.setCellValue(rowNode.get("reporte").asText());
+			cantidadCell.setCellValue(rowNode.get("cantidad").asDouble());
 			almacenCell.setCellValue(rowNode.get("ubicacion").asText());
 			status_ubicacionCell.setCellValue(rowNode.get("articulo").asText());
 			cantidad_consiganadaCell.setCellValue(rowNode.get("descripcion").asText());
@@ -121,10 +134,25 @@ public class InventoryController {
 			colNum = 0;
 		}
 		
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
-		   LocalDateTime now = LocalDateTime.now();  
-		   
+			
+	 	XSSFSheet sheet1 = wb.getSheetAt(0); 
+        
+        
+        /* Get the reference for Pivot Data */
+        AreaReference a=new AreaReference("A:L",SpreadsheetVersion.EXCEL2007);
+        /* Find out where the Pivot Table needs to be placed */
+        XSSFSheet pivot_sheet=wb.createSheet();
+        CellReference b=new CellReference("A1");
+        /* Create Pivot Table */
+        XSSFPivotTable pivotTable = pivot_sheet.createPivotTable(a,b,sheet1);
+        /* Add filters */
+        //pivotTable.addReportFilter(0);
+        pivotTable.addRowLabel(0);
+        pivotTable.addColumnLabel(DataConsolidateFunction.SUM, 5); 
+        /* Write Pivot Table to File */
 		
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		LocalDateTime now = LocalDateTime.now();  
 		String filename = "D:/Inventory_"+ dtf.format(now) +".xlsx";
 		System.out.println("Nombre Archivo  "+filename);
 		FileOutputStream outputStream = new FileOutputStream(filename.toString());
@@ -132,7 +160,6 @@ public class InventoryController {
 		wb.close();
 		System.out.println(" Excel file generated");
         
-
         return new ResponseEntity<>("Se Genero el Archivo: " + filename, HttpStatus.OK);
     }
 	

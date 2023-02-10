@@ -1,5 +1,7 @@
 package com.dinet.documents.web;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -57,14 +59,20 @@ public class InventoryController {
 
         JsonNode node = mapper.valueToTree(response);
 
-      
-        
         JsonNode header = node.get("header");
     	System.out.println("Ingresa a Body: " + header);
 		Iterator<JsonNode> it = header.iterator();
-		XSSFWorkbook wb = new XSSFWorkbook();
-		XSSFSheet sheet = wb.createSheet("Data Reporte");
-		XSSFSheet sheet2 = wb.createSheet("Resumen");
+		
+		//Archivo Origen
+		File file = new File("D:\\MaestroDynamica.xlsx");
+	    FileInputStream inputStream = new FileInputStream(file);
+		
+		
+		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
+		
+		 
+		XSSFSheet sheet = wb.getSheet("Data Reporte");
+	 	XSSFSheet sheet2 = wb.getSheet("Resumen");
 
 		Row row = sheet.createRow(0);
 		int colNum = 0;
@@ -72,6 +80,7 @@ public class InventoryController {
 			Cell cell = row.createCell(colNum++);
 			cell.setCellValue(it.next().asText());
 		}
+		
 		JsonNode body = node.get("inventariolist");
 		System.out.println("Ingresa a Body: " + body);
 		int rowNum = 1;

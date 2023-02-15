@@ -26,10 +26,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dinet.documents.web.model.InventoryListModel;
 import com.dinet.documents.web.model.InventoryModel;
+import com.dinet.documents.web.model.InventoryModelHeader;
+import com.dinet.documents.web.model.InventoryResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
@@ -51,26 +54,25 @@ public class InventoryController {
 	
 	
 	@PostMapping
+	@ResponseBody
     public ResponseEntity<Object> transforme(@RequestBody InventoryListModel inventoryModel) throws IOException  {
 
-		InventoryListModel response = inventoryModel; 
-       // Gson gson = new Gson();
-       // String json = gson.toJson(response);
-      
-
+		
+		String json = "{\"header\":[\"reporte\",\"ubicacion\",\"articulo\",\"descripcion\",\"estatus_inventario\",\"cantidad\",\"almacen\",\"status_ubicacion\",\"cantidad_consiganada\",\"area\",\"zona_movimiento\",\"familia\"]}";
+        Gson gson = new Gson();
+        InventoryModelHeader headermodel = gson.fromJson(json, InventoryModelHeader.class);
+        List<String> headerList = headermodel.getHeader();
+        
+        InventoryListModel response = inventoryModel;
+			
         ObjectMapper mapper = new ObjectMapper();
-       // JsonNode node2 = mapper.createObjectNode();
-       // JsonNode node2 = JsonNodeFactory.instance.objectNode();
-
         JsonNode node = mapper.valueToTree(response);
+        JsonNode nodehdr = mapper.valueToTree(headerList);
 
-        JsonNode header = node.get("header");
-    	System.out.println("Ingresa a Body: " + header);
+        JsonNode header = nodehdr;//.get("header");
+    	System.out.println("Ingresa a Header: " + header);
 		Iterator<JsonNode> it = header.iterator();
-		
-		
-		
-		
+
 		//Archivo Origen
 		File file = new File("D:\\MaestroDynamica.xlsx");
 	    FileInputStream inputStream = new FileInputStream(file);
@@ -159,9 +161,25 @@ public class InventoryController {
 		wb.write(outputStream);
 		wb.close();
 		System.out.println(" Excel file generated");
+		
+		String responsevalue= filename.toString();
+		
+		InventoryResponse rs= new InventoryResponse(responsevalue,now,"OK");
+
+		return new ResponseEntity<Object>(new InventoryResponse(rs.getRuta(),rs.getFecha(),rs.getMensaje()),HttpStatus.OK);
         
-        return new ResponseEntity<>("Se Genero el Archivo: " + filename, HttpStatus.OK);
+        //return new ResponseEntity(new InventoryResponse)
     }
+	
+	
+	
+	/*
+	 * 
+	 * return ResponseEntity.status(HttpStatus.OK)
+        .body("Your age is " + calculateAge(yearOfBirth));
+	 * */
+	
+	
 	
 	/*
 	 LISTA

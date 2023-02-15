@@ -346,3 +346,159 @@
 2023-02-10 16:09:19,694 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
 2023-02-10 16:09:19,694 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
 2023-02-10 16:09:19,972 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.306 seconds (JVM running for 68.643)
+2023-02-10 16:13:13,480 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 7340 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-10 16:13:13,480 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-10 16:13:13,480 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-10 16:13:13,734 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.278 seconds (JVM running for 302.403)
+2023-02-10 17:30:58,209 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 7340 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-10 17:30:58,209 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-10 17:30:58,209 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-10 17:30:58,471 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.295 seconds (JVM running for 4967.142)
+2023-02-10 17:30:59,925 INFO com.dinet.documents.DocumentsApplicationTests [main] Starting DocumentsApplicationTests using Java 17.0.5 on RLPT1177 with PID 26556 (started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-10 17:30:59,927 DEBUG com.dinet.documents.DocumentsApplicationTests [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-10 17:30:59,928 INFO com.dinet.documents.DocumentsApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-10 17:31:00,982 INFO com.dinet.documents.DocumentsApplicationTests [main] Started DocumentsApplicationTests in 1.317 seconds (JVM running for 2.255)
+2023-02-10 17:32:10,083 INFO com.dinet.documents.DocumentsApplicationTests [main] Starting DocumentsApplicationTests using Java 17.0.5 on RLPT1177 with PID 4440 (started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-10 17:32:10,084 DEBUG com.dinet.documents.DocumentsApplicationTests [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-10 17:32:10,085 INFO com.dinet.documents.DocumentsApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-10 17:32:11,161 INFO com.dinet.documents.DocumentsApplicationTests [main] Started DocumentsApplicationTests in 1.276 seconds (JVM running for 2.173)
+2023-02-13 11:52:50,782 INFO com.dinet.documents.DocumentsApplicationTests [main] Starting DocumentsApplicationTests using Java 17.0.5 on RLPT1177 with PID 19052 (started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-13 11:52:50,813 DEBUG com.dinet.documents.DocumentsApplicationTests [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-13 11:52:50,814 INFO com.dinet.documents.DocumentsApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-13 12:35:05,423 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 15180 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-13 12:35:05,429 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-13 12:35:05,429 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-13 12:36:10,164 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 4272 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-13 12:36:10,168 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-13 12:36:10,169 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-13 12:40:06,650 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 9596 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-13 12:40:06,653 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-13 12:40:06,655 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-14 10:26:49,393 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 28296 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-14 10:26:49,404 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-14 10:26:49,406 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-14 10:28:11,727 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21860 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-14 10:28:11,736 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-14 10:28:11,738 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:02:29,794 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 30376 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:02:29,803 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:02:29,804 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:28:14,692 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 11724 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:28:14,697 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:28:14,698 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:29:37,193 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 13160 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:29:37,198 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:29:37,199 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:29:38,561 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.688 seconds (JVM running for 2.624)
+2023-02-15 11:31:17,166 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 23584 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:31:17,172 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:31:17,172 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:31:18,562 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.707 seconds (JVM running for 2.678)
+2023-02-15 11:33:14,542 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 15104 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:33:14,548 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:33:14,548 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:33:15,764 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.538 seconds (JVM running for 2.49)
+2023-02-15 11:42:01,190 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 15104 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:42:01,190 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:42:01,190 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:42:01,452 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.287 seconds (JVM running for 528.179)
+2023-02-15 11:42:11,138 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 15104 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:42:11,139 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:42:11,139 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:42:11,408 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.298 seconds (JVM running for 538.134)
+2023-02-15 11:57:04,798 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 12660 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:57:04,804 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:57:04,804 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:57:06,202 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.729 seconds (JVM running for 2.672)
+2023-02-15 11:58:11,291 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 12660 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:58:11,291 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:58:11,291 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:58:11,558 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.294 seconds (JVM running for 68.027)
+2023-02-15 11:58:27,748 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 30608 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 11:58:27,754 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 11:58:27,754 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 11:58:28,974 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.54 seconds (JVM running for 2.521)
+2023-02-15 12:10:32,467 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:10:32,472 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:10:32,473 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:10:33,672 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.523 seconds (JVM running for 2.777)
+2023-02-15 12:16:11,619 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:16:11,620 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:16:11,620 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:16:11,870 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.292 seconds (JVM running for 340.975)
+2023-02-15 12:16:34,929 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:16:34,930 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:16:34,930 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:16:35,266 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.36 seconds (JVM running for 364.371)
+2023-02-15 12:16:40,861 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:16:40,861 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:16:40,861 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:16:41,054 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.216 seconds (JVM running for 370.16)
+2023-02-15 12:18:31,002 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:18:31,002 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:18:31,002 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:18:31,201 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.226 seconds (JVM running for 480.306)
+2023-02-15 12:21:17,414 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:21:17,414 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:21:17,414 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:21:17,617 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.231 seconds (JVM running for 646.723)
+2023-02-15 12:21:25,283 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:21:25,283 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:21:25,283 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:21:25,483 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.226 seconds (JVM running for 654.588)
+2023-02-15 12:21:26,989 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:21:26,989 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:21:26,989 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:21:27,180 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.212 seconds (JVM running for 656.285)
+2023-02-15 12:21:31,795 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:21:31,795 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:21:31,795 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:21:31,991 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.219 seconds (JVM running for 661.097)
+2023-02-15 12:22:38,085 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:22:38,085 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:22:38,085 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:22:38,275 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.211 seconds (JVM running for 727.38)
+2023-02-15 12:23:05,433 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 2736 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:23:05,433 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:23:05,433 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:23:05,654 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.243 seconds (JVM running for 754.759)
+2023-02-15 12:27:20,897 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:27:20,903 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:27:20,903 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:27:22,134 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.564 seconds (JVM running for 2.584)
+2023-02-15 12:28:26,992 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:28:26,992 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:28:26,992 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:28:27,227 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.263 seconds (JVM running for 67.676)
+2023-02-15 12:28:52,312 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:28:52,312 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:28:52,312 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:28:52,629 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.339 seconds (JVM running for 93.078)
+2023-02-15 12:28:58,199 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:28:58,199 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:28:58,199 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:28:58,441 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.266 seconds (JVM running for 98.89)
+2023-02-15 12:32:44,938 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:32:44,938 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:32:44,938 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:32:45,170 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.256 seconds (JVM running for 325.616)
+2023-02-15 12:32:47,675 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:32:47,675 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:32:47,675 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:32:47,971 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.319 seconds (JVM running for 328.416)
+2023-02-15 12:35:40,052 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:35:40,052 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:35:40,052 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:35:40,275 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.248 seconds (JVM running for 500.719)
+2023-02-15 12:41:16,703 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:41:16,703 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:41:16,703 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:41:16,920 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.246 seconds (JVM running for 837.362)
+2023-02-15 12:41:56,186 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 21396 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:41:56,186 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:41:56,187 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:41:56,377 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 0.213 seconds (JVM running for 876.818)
+2023-02-15 12:54:30,597 INFO com.dinet.documents.DocumentsApplication [restartedMain] Starting DocumentsApplication using Java 17.0.5 on RLPT1177 with PID 3480 (D:\Desarrollos en Java\documents\target\classes started by chuamani in D:\Desarrollos en Java\documents)
+2023-02-15 12:54:30,603 DEBUG com.dinet.documents.DocumentsApplication [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-15 12:54:30,604 INFO com.dinet.documents.DocumentsApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-02-15 12:54:31,931 INFO com.dinet.documents.DocumentsApplication [restartedMain] Started DocumentsApplication in 1.671 seconds (JVM running for 2.75)

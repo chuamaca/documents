@@ -8,5 +8,5 @@ public class InventoryListModel {
 	
 	public List<InventoryModel> inventariolist;
 	
-	public List<String> header;
+	//public List<String> header;
 }

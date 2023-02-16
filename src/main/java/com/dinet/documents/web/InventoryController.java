@@ -38,9 +38,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.google.gson.Gson;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/v1/inventory")
+@Slf4j
 public class InventoryController {
 
 	
@@ -54,11 +59,10 @@ public class InventoryController {
 	
 	
 	@PostMapping
-	@ResponseBody
     public ResponseEntity<Object> transforme(@RequestBody InventoryListModel inventoryModel) throws IOException  {
-
+		log.info("Inicio " + inventoryModel);
 		
-		String json = "{\"header\":[\"reporte\",\"ubicacion\",\"articulo\",\"descripcion\",\"estatus_inventario\",\"cantidad\",\"almacen\",\"status_ubicacion\",\"cantidad_consiganada\",\"area\",\"zona_movimiento\",\"familia\"]}";
+		String json = "{\"header\":[\"reporte\",\"ubicacion\",\"articulo\",\"descripcion\",\"estatus_inventario\",\"cantidad\",\"almacen\",\"status_ubicacion\",\"cantidad_consignada\",\"area\",\"zona_movimiento\",\"familia\"]}";
         Gson gson = new Gson();
         InventoryModelHeader headermodel = gson.fromJson(json, InventoryModelHeader.class);
         List<String> headerList = headermodel.getHeader();
@@ -71,11 +75,13 @@ public class InventoryController {
 
         JsonNode header = nodehdr;//.get("header");
     	System.out.println("Ingresa a Header: " + header);
+    	log.info("Ingresa a Header: " + header);
 		Iterator<JsonNode> it = header.iterator();
 
 		//Archivo Origen
-		File file = new File("D:\\MaestroDynamica.xlsx");
-	    FileInputStream inputStream = new FileInputStream(file);
+		File file = new File("\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Copia\\MaestroDynamica.xlsx");
+		log.info("File Master: " + file);
+		FileInputStream inputStream = new FileInputStream(file);
 		
 		
 		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
@@ -98,6 +104,7 @@ public class InventoryController {
 		
 		JsonNode body = node.get("inventariolist");
 		System.out.println("Ingresa a Body: " + body);
+		log.info("Ingresa a Body: " + body);
 		int rowNum = 1;
 		colNum = 0;
 		int i = 0;
@@ -114,7 +121,7 @@ public class InventoryController {
 			Cell cantidadCell = bodyRow.createCell(colNum++);
 			Cell almacenCell = bodyRow.createCell(colNum++);
 			Cell status_ubicacionCell = bodyRow.createCell(colNum++);
-			Cell cantidad_consiganadaCell = bodyRow.createCell(colNum++);
+			Cell cantidad_consignadaCell = bodyRow.createCell(colNum++);
 			Cell areaCell = bodyRow.createCell(colNum++);
 			Cell zona_movimientoCell = bodyRow.createCell(colNum++);
 			Cell familiaCell = bodyRow.createCell(colNum++);
@@ -126,12 +133,12 @@ public class InventoryController {
 			descripcionCell.setCellValue(rowNode.get("descripcion").asText());
 			estatus_inventarioCell.setCellValue(rowNode.get("estatus_inventario").asText());
 			cantidadCell.setCellValue(rowNode.get("cantidad").asDouble());
-			almacenCell.setCellValue(rowNode.get("ubicacion").asText());
-			status_ubicacionCell.setCellValue(rowNode.get("articulo").asText());
-			cantidad_consiganadaCell.setCellValue(rowNode.get("descripcion").asText());
-			areaCell.setCellValue(rowNode.get("estatus_inventario").asText());
-			zona_movimientoCell.setCellValue(rowNode.get("reporte").asText());
-			familiaCell.setCellValue(rowNode.get("ubicacion").asText());
+			almacenCell.setCellValue(rowNode.get("almacen").asText());
+			status_ubicacionCell.setCellValue(rowNode.get("status_ubicacion").asText());
+			cantidad_consignadaCell.setCellValue(rowNode.get("cantidad_consignada").asText());
+			areaCell.setCellValue(rowNode.get("area").asText());
+			zona_movimientoCell.setCellValue(rowNode.get("zona_movimiento").asText());
+			familiaCell.setCellValue(rowNode.get("familia").asText());
 			
 			colNum = 0;
 		}
@@ -155,31 +162,28 @@ public class InventoryController {
 		
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 		LocalDateTime now = LocalDateTime.now();  
-		String filename = "D:/Inventory_"+ dtf.format(now) +".xlsx";
+		String filename = "\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Inventory_"+ dtf.format(now) +".xlsx";
+		log.info("Ingresa a FileName SAVE: " + filename);
+		System.out.println("RUTA: " + filename);
 		System.out.println("Nombre Archivo  "+filename);
+		
+		
 		FileOutputStream outputStream = new FileOutputStream(filename.toString());
 		wb.write(outputStream);
 		wb.close();
+		outputStream.close();
+		
 		System.out.println(" Excel file generated");
 		
 		String responsevalue= filename.toString();
 		
 		InventoryResponse rs= new InventoryResponse(responsevalue,now,"OK");
-
+		log.info("respuesta: " + rs);
+		System.out.println("respuesta: "+rs);
 		return new ResponseEntity<Object>(new InventoryResponse(rs.getRuta(),rs.getFecha(),rs.getMensaje()),HttpStatus.OK);
         
         //return new ResponseEntity(new InventoryResponse)
     }
-	
-	
-	
-	/*
-	 * 
-	 * return ResponseEntity.status(HttpStatus.OK)
-        .body("Your age is " + calculateAge(yearOfBirth));
-	 * */
-	
-	
 	
 	/*
 	 LISTA

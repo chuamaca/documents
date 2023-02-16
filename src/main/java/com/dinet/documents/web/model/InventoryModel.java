@@ -26,7 +26,7 @@ public class InventoryModel {
 	private String cantidad;
 	private String almacen;
 	private String status_ubicacion;
-	private String cantidad_consiganada;
+	private String cantidad_consignada;
 	private String area;
 	private String zona_movimiento;
 	private String familia;

@@ -52,25 +52,28 @@ public class InventoryController {
 	
 	@GetMapping(produces = { "application/json" })
 	public ResponseEntity<String> getAll() throws Exception {
-
+		File file = new File("D:\\MaestroDynamica.xlsx");
+		log.info("->> GetMapping: " + file);
 		return new ResponseEntity<String>("Hola", HttpStatus.OK);
-
 	}
 	
 	
 	@PostMapping
     public ResponseEntity<Object> transforme(@RequestBody InventoryListModel inventoryModel) throws IOException  {
-		log.info("Inicio " + inventoryModel);
+		log.info("->> Inicio: " + inventoryModel);
 		
 		String json = "{\"header\":[\"reporte\",\"ubicacion\",\"articulo\",\"descripcion\",\"estatus_inventario\",\"cantidad\",\"almacen\",\"status_ubicacion\",\"cantidad_consignada\",\"area\",\"zona_movimiento\",\"familia\"]}";
-        Gson gson = new Gson();
+		log.info("->> json: " + json);
+		Gson gson = new Gson();
         InventoryModelHeader headermodel = gson.fromJson(json, InventoryModelHeader.class);
         List<String> headerList = headermodel.getHeader();
         
         InventoryListModel response = inventoryModel;
-			
+        log.info("->> response: " + response);
+        
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = mapper.valueToTree(response);
+        log.info("->> node: " + node);
         JsonNode nodehdr = mapper.valueToTree(headerList);
 
         JsonNode header = nodehdr;//.get("header");
@@ -79,13 +82,15 @@ public class InventoryController {
 		Iterator<JsonNode> it = header.iterator();
 
 		//Archivo Origen
-		File file = new File("\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Copia\\MaestroDynamica.xlsx");
-		log.info("File Master: " + file);
+		//File file = new File("\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Copia\\MaestroDynamica.xlsx");
+		//File file = new File("C:\\report");
+		File file = new File("C:\\report\\Plantilla\\MaestroDynamica.xlsx");
+		log.info("->>File Master: " + file);
 		FileInputStream inputStream = new FileInputStream(file);
-		
+		log.info("->>File inputStream: " + inputStream);
 		
 		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
-		
+		log.info("->> wb: " + wb);
 		/*
 		 
 	 	XSSFSheet sheet2 = wb.getSheet("Resumen"); 
@@ -94,8 +99,9 @@ public class InventoryController {
 		 
 		XSSFSheet sheet = wb.getSheet("Data Reporte");
 		//XSSFSheet sheet2 = wb.createSheet("Resumen");
-
+		log.info("->> sheet: " + sheet);
 		Row row = sheet.createRow(0);
+		log.info("->> row: " + row);
 		int colNum = 0;
 		while(it.hasNext()) {
 			Cell cell = row.createCell(colNum++);
@@ -156,13 +162,16 @@ public class InventoryController {
         XSSFPivotTable pivotTable = pivot_sheet.createPivotTable(a,b,sheet1);
         /* Add filters */
         //pivotTable.addReportFilter(0);
-        pivotTable.addRowLabel(0);
-        pivotTable.addColumnLabel(DataConsolidateFunction.SUM, 5); 
+        pivotTable.addRowLabel(10);
+        pivotTable.addColumnLabel(DataConsolidateFunction.SUM, 5);
+        
         /* Write Pivot Table to File */
 		
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 		LocalDateTime now = LocalDateTime.now();  
-		String filename = "\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Inventory_"+ dtf.format(now) +".xlsx";
+		//String filename = "\\\\172.16.163.11\\wmsdev2_1\\LES\\files\\reports\\A1034\\Inventory_"+ dtf.format(now) +".xlsx";
+		String filename = "C:\\report\\Stock_"+ dtf.format(now) +".xlsx";
+		//String filename = "D:\\Inventory_"+ dtf.format(now) +".xlsx";
 		log.info("Ingresa a FileName SAVE: " + filename);
 		System.out.println("RUTA: " + filename);
 		System.out.println("Nombre Archivo  "+filename);

@@ -54,6 +54,30 @@ public class InventoryController {
 	public ResponseEntity<String> getAll() throws Exception {
 		File file = new File("D:\\MaestroDynamica.xlsx");
 		log.info("->> GetMapping: " + file);
+		String valie= "{\"uts_header\":{\"origen\":\"ECOM\",\"dn\":\"6772465360\",\"fecha_creacion\":\"20200114000000\",\"fecha_de_ingreso\":\"20200114000000\",\"purchase_order\":\"APE00801688\",\"unidades\":\"2\",\"guia\":\"A1034000000001564483\",\"fecha_despacho\":\"20200114191255\",\"calle\":\"Avenida Del Ejercito 530\",\"numero\":\"Edificio de Herbalfie\",\"localidad\":\"150122\",\"solicitante\":\"Mylene\",\"telefono\":\"977350271\",\"total_lpn_quantity\":\"1\",\"detail\":[{\"nro_oc_cliente\":\"APE00801688\",\"ordnum\":\"6772465360\",\"prtnum\":\"FI4664250\",\"desc_talla\":\"M\",\"lngdsc\":\"M * M AAC FZ Hoodie     TINLEY * LEGINK\",\"inloadqty\":\"1\"},{\"nro_oc_cliente\":\"APE00801688\",\"ordnum\":\"6772465360\",\"prtnum\":\"FP8074230\",\"desc_talla\":\"S\",\"lngdsc\":\"S * W St Tracktop       NEGRO * BLACK\",\"inloadqty\":\"1\"}]}}";
+		
+			if(valie.contains("uts_headerp")){
+            
+	            String newJson = valie.replace("{\"uts_header\":","");
+	            String newjson2 = newJson.substring(1, newJson.length()-1);
+	            
+	            String newjson3= "[{"+newjson2+"]";
+	            System.out.println(newjson3);
+           
+            }else {
+            	 String newJson = valie.replace("{\"uts_header\":","");
+ 	            String newjson2 = newJson.substring(1, newJson.length()-1);
+ 	            
+ 	            String jsonOk="[{\"origen\":\"NO ECOM\",\"dn\":\"6755231824\",\"fecha_creacion\":\"2023-02-21T15:21:06.236Z\",\"fecha_de_ingreso\":\"2023-02-21T15:21:06.236Z\",\"purchase_order\":\"L59099-001\",\"unidades\":10,\"guia\":\"A1034000000009315121\",\"fecha_despacho\":\"2023-02-21T15:21:06.236Z\",\"tpent\":\"\",\"calle\":\"AV ALFREDO MENDIOLA 3698\",\"numero\":\"111\",\"localidad\":\"040513\",\"solicitante\":\"ADIDAS KIDS MEGA PLAZA\",\"peso\":\"10\",\"telefono\":\"987654321\",\"complemento\":\"\",\"carrier\":\"Dinet\",\"region\":\"LIMA\",\"email\":\"cesarq@gmail.com\",\"soldto\":\"6720000917\",\"soldto_name\":\"ADIDAS KIDS MEGA PLAZA\",\"shipto\":\"6720000917\",\"shipto_name\":\"ADIDAS KIDS MEGA PLAZA\",\"shipto_addr_1\":\"CALL01\",\"shipto_addr_2\":\"CALL01\",\"shipto_addr_3\":\"CALL01\",\"shipto_city\":\"LIMA\",\"shipto_zip\":\"040513\",\"estimated_weight\":\"1\",\"total_lpn_quantity\":\"5\",\"detalle\":[{\"purchase_order\":\"L59099-001\",\"dn\":\"6755231824\",\"id\":\"\",\"brcd\":\"\",\"articulo\":\"DZ9347120\",\"talla_us\":\"M\",\"description\":\"M * 3S CSH CRW3P        NEGRO/NEGR * BLACKBLACKBLACK\",\"units\":\"10\"},{\"purchase_order\":\"L59099-001\",\"dn\":\"6755231824\",\"id\":\"\",\"brcd\":\"\",\"articulo\":\"DZ9347120\",\"talla_us\":\"M\",\"description\":\"M * 3S CSH CRW3P        NEGRO/NEGR * BLACKBLACKBLACK\",\"units\":\"10\"}]},{\"origen\":\"NO ECOM\",\"dn\":\"6755231824\",\"fecha_creacion\":\"2023-02-21T15:21:06.236Z\",\"fecha_de_ingreso\":\"2023-02-21T15:21:06.236Z\",\"purchase_order\":\"L59099-001\",\"unidades\":10,\"guia\":\"A1034000000009315121\",\"fecha_despacho\":\"2023-02-21T15:21:06.236Z\",\"tpent\":\"\",\"calle\":\"AV ALFREDO MENDIOLA 3698\",\"numero\":\"111\",\"localidad\":\"040513\",\"solicitante\":\"ADIDAS KIDS MEGA PLAZA\",\"peso\":\"10\",\"telefono\":\"987654321\",\"complemento\":\"\",\"carrier\":\"Dinet\",\"region\":\"LIMA\",\"email\":\"cesarq@gmail.com\",\"soldto\":\"6720000917\",\"soldto_name\":\"ADIDAS KIDS MEGA PLAZA\",\"shipto\":\"6720000917\",\"shipto_name\":\"ADIDAS KIDS MEGA PLAZA\",\"shipto_addr_1\":\"CALL01\",\"shipto_addr_2\":\"CALL01\",\"shipto_addr_3\":\"CALL01\",\"shipto_city\":\"LIMA\",\"shipto_zip\":\"040513\",\"estimated_weight\":\"1\",\"total_lpn_quantity\":\"5\",\"detalle\":[{\"purchase_order\":\"L59099-001\",\"dn\":\"6755231824\",\"id\":\"\",\"brcd\":\"\",\"articulo\":\"DZ9347120\",\"talla_us\":\"M\",\"description\":\"M * 3S CSH CRW3P        NEGRO/NEGR * BLACKBLACKBLACK\",\"units\":\"10\"},{\"purchase_order\":\"L59099-001\",\"dn\":\"6755231824\",\"id\":\"\",\"brcd\":\"\",\"articulo\":\"DZ9347120\",\"talla_us\":\"M\",\"description\":\"M * 3S CSH CRW3P        NEGRO/NEGR * BLACKBLACKBLACK\",\"units\":\"10\"}]}]";
+ 	            String jsonEdit="";
+ 	            String newjson3= "[{"+newjson2+"]";
+ 	            System.out.println(newjson3);
+ 	            System.out.println("Entro al Else");
+            	
+            }
+		
+		
+		
 		return new ResponseEntity<String>("Hola", HttpStatus.OK);
 	}
 	
@@ -162,8 +186,21 @@ public class InventoryController {
         XSSFPivotTable pivotTable = pivot_sheet.createPivotTable(a,b,sheet1);
         /* Add filters */
         //pivotTable.addReportFilter(0);
-        pivotTable.addRowLabel(10);
+        pivotTable.addRowLabel(4);
+        pivotTable.addRowLabel(1);
         pivotTable.addColumnLabel(DataConsolidateFunction.SUM, 5);
+        
+        //
+        
+       // XSSFSheet sheetPi = wb.getSheetAt(1);
+       // XSSFPivotTable pivotTableNew = sheetPi.getPivotTables().get(i);
+        
+       // AreaReference dataArea = pivotTableNew.
+
+        
+        
+        //
+        
         
         /* Write Pivot Table to File */
 		

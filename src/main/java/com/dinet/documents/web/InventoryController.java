@@ -18,24 +18,20 @@ import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xssf.usermodel.XSSFPivotTable;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.json.JSONArray;
-import org.json.JSONObject;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dinet.documents.web.model.InventoryListModel;
-import com.dinet.documents.web.model.InventoryModel;
 import com.dinet.documents.web.model.InventoryModelHeader;
 import com.dinet.documents.web.model.InventoryResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.google.gson.Gson;
 
 import lombok.RequiredArgsConstructor;
@@ -54,7 +50,13 @@ public class InventoryController {
 	public ResponseEntity<String> getAll() throws Exception {
 		File file = new File("D:\\MaestroDynamica.xlsx");
 		log.info("->> GetMapping: " + file);
-		String valie= "{\"uts_header\":{\"origen\":\"ECOM\",\"dn\":\"6772465360\",\"fecha_creacion\":\"20200114000000\",\"fecha_de_ingreso\":\"20200114000000\",\"purchase_order\":\"APE00801688\",\"unidades\":\"2\",\"guia\":\"A1034000000001564483\",\"fecha_despacho\":\"20200114191255\",\"calle\":\"Avenida Del Ejercito 530\",\"numero\":\"Edificio de Herbalfie\",\"localidad\":\"150122\",\"solicitante\":\"Mylene\",\"telefono\":\"977350271\",\"total_lpn_quantity\":\"1\",\"detail\":[{\"nro_oc_cliente\":\"APE00801688\",\"ordnum\":\"6772465360\",\"prtnum\":\"FI4664250\",\"desc_talla\":\"M\",\"lngdsc\":\"M * M AAC FZ Hoodie     TINLEY * LEGINK\",\"inloadqty\":\"1\"},{\"nro_oc_cliente\":\"APE00801688\",\"ordnum\":\"6772465360\",\"prtnum\":\"FP8074230\",\"desc_talla\":\"S\",\"lngdsc\":\"S * W St Tracktop       NEGRO * BLACK\",\"inloadqty\":\"1\"}]}}";
+		String valie= "{\"uts_header\":{\"origen\":\"ECOM\",\"dn\":\"6772465360\","
+				+ "\"fecha_creacion\":\"20200114000000\",\"fecha_de_ingreso\":\"20200114000000\","
+				+ "\"purchase_order\":\"APE00801688\",\"unidades\":\"2\",\"guia\":\"A1034000000001564483\""
+				+ ",\"fecha_despacho\":\"20200114191255\",\"calle\":\"Avenida Del Ejercito 530\","
+				+ "\"numero\":\"Edificio de Herbalfie\",\"localidad\":\"150122\",\"solicitante\":"
+				+ "\"Mylene\",\"telefono\":\"977350271\",\"total_lpn_quantity\":\"1\",\"detail\":[{\"nro_oc_cliente\":\"APE00801688\","
+				+ "\"ordnum\":\"6772465360\",\"prtnum\":\"FI4664250\",\"desc_talla\":\"M\",\"lngdsc\":\"M * M AAC FZ Hoodie     TINLEY * LEGINK\",\"inloadqty\":\"1\"},{\"nro_oc_cliente\":\"APE00801688\",\"ordnum\":\"6772465360\",\"prtnum\":\"FP8074230\",\"desc_talla\":\"S\",\"lngdsc\":\"S * W St Tracktop       NEGRO * BLACK\",\"inloadqty\":\"1\"}]}}";
 		
 			if(valie.contains("uts_headerp")){
             
@@ -127,6 +129,7 @@ public class InventoryController {
 		Row row = sheet.createRow(0);
 		log.info("->> row: " + row);
 		int colNum = 0;
+		
 		while(it.hasNext()) {
 			Cell cell = row.createCell(colNum++);
 			cell.setCellValue(it.next().asText());
